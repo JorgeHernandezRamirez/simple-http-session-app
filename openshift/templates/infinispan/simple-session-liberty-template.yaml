@@ -125,7 +125,7 @@ objects:
            kind: ImageStreamTag
            name: "${APPLICATION_NAME}:latest"
      - type: ConfigChange
-    replicas: ${REPLICAS}
+    replicas: ${{REPLICAS}}
     selector:
       deploymentConfig: "${APPLICATION_NAME}"
     template:

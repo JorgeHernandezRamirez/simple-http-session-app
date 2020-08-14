@@ -9,7 +9,7 @@
 <httpEndpoint host="*" httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
 
 <!-- reference the library containing a JCache implementation -->
-<httpSessionCache libraryRef="InfinispanLib">
+<httpSessionCache libraryRef="InfinispanLib" enableBetaSupportForInfinispan="true">
   <properties infinispan.client.hotrod.server_list="${env.INFINISPAN_HOST}:11222"/>
   <properties infinispan.client.hotrod.marshaller="org.infinispan.commons.marshall.JavaSerializationMarshaller"/>
   <properties infinispan.client.hotrod.auth_username="${env.INFINISPAN_USER}"/>
