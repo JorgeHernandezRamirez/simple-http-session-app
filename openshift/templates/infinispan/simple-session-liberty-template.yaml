@@ -45,7 +45,7 @@ parameters:
 - name: GIT_URI
   description: Git source URI for application
   displayName: Git source URI for application
-  value: 'https://github.com/IBMAppModernization/simple-http-session-app'
+  value: 'https://github.com/JorgeHernandezRamirez/simple-http-session-app'
   required: true
 - name: GIT_BRANCH
   description: Git source branch for application
