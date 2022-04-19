@@ -1,5 +1,5 @@
 # IMAGE: Get the base image for Liberty
-FROM open-liberty
+FROM openliberty/open-liberty:latest
 
 # Add Infinispan config
 COPY wlp/config/jvm.options /opt/ol/wlp/usr/servers/defaultServer/jvm.options
