@@ -55,7 +55,7 @@ parameters:
 - name: DOCKERFILE
   description: Dockerfile to use for BuildConfig
   displayName: Dockerfile to use for BuildConfig
-  value: 'Dockerfile.infinispan'
+  value: 'Dockerfile'
   required: true
 - name: GENERIC_TRIGGER_SECRET
   displayName: Generic build trigger secret
