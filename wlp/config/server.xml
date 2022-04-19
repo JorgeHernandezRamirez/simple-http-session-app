@@ -65,4 +65,5 @@
   </library>
     
 <!--     <webApplication id="datagrid" location="datagrid.war" name="datagrid"/> -->
+  <webApplication contextRoot="/" location="ss-web.war" />
 </server>
