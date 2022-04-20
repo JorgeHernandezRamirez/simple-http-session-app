@@ -1,6 +1,7 @@
 # Run in local
 Build with mvn
 ```bash
+mvn clean install
 docker build -t session:1.0 .
 ```
 Export credentials
@@ -25,7 +26,7 @@ docker run --name session$RANDOM -p 9080:9080 \
 -e INFINISPAN_HOST=$(ifconfig | grep "inet " | grep -Fv 127.0.0.1 | head -1 | awk '{print $2}')  \
 -e INFINISPAN_USER=$USERNAME \
 -e INFINISPAN_PASSWORD=$PASSWORD \
-session:latest
+session:1.0
 ```
 
 # IBM Client Developer Advocacy App Modernization Series
