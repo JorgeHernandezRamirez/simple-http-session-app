@@ -7,10 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet("/ready")
-public class K8sReadyServlet extends HttpServlet {
+public class ReadyServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
@@ -19,8 +18,6 @@ public class K8sReadyServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
-        out.println("OK");
+        resp.getWriter().println("OK");
     }
 }
