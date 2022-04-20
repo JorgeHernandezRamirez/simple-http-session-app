@@ -1,6 +1,5 @@
-package com.ibm.sample.ss.ejb;
+package com.ibm.external.session.ejb;
 
-import javax.ejb.Stateful;
 import javax.ejb.Stateless;
 
 @Stateless

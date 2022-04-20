@@ -3,23 +3,29 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.ibm.demo.ss</groupId>
+		<groupId>com.ibm.external.session</groupId>
 		<artifactId>parent</artifactId>
 		<version>1.0</version>
 	</parent>
 
-	<groupId>com.ibm.demo.ss</groupId>
+	<groupId>com.ibm.external.session</groupId>
 	<artifactId>web</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>Simple HttpSession war file assembly</name>
+	<name>External session war</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>ejb</artifactId>

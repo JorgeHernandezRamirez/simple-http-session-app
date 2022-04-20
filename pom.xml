@@ -2,34 +2,19 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.ibm.demo.ss</groupId>
+	<groupId>com.ibm.external.session</groupId>
 	<artifactId>parent</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>
 
-	<name>Simple HTTPSession sample</name>
+	<name>External session parent</name>
 
 	<modules>
-		<module>ss-ejb</module>
-		<module>ss-web</module>
-		<module>ss-ear</module>
+		<module>external-session-ejb</module>
+		<module>external-session-web</module>
+		<module>external-session-ear</module>
 	</modules>
 
-	<build>
-		<!--<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<target>1.8</target>
-					<source>1.8</source>
-					<compilerArguments>
-						<endorseddirs>${WAS_HOME}/endorsed_apis</endorseddirs>
-					</compilerArguments>
-				</configuration>
-			</plugin>
-		</plugins>-->
-	</build>
 	<profiles>
 		<profile>
 			<id>openshift</id>

@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ss-ejb/pom.xml" />
+        <option value="$PROJECT_DIR$/external-session-ear/pom.xml" />
       </list>
     </option>
   </component>

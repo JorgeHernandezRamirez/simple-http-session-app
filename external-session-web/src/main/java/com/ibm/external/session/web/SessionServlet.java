@@ -1,21 +1,19 @@
-package com.ibm.demo.ss;
+package com.ibm.external.session.web;
 
+import com.ibm.external.session.ejb.SessionEJB;
 
-import com.ibm.sample.ss.ejb.SessionEJB;
-
-import java.io.IOException;
 import javax.ejb.EJB;
-import javax.enterprise.context.SessionScoped;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Date;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Date;
 
 @WebServlet("/session")
 public class SessionServlet extends HttpServlet {

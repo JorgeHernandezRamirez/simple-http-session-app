@@ -1,4 +1,4 @@
-package com.ibm.demo.ss;
+package com.ibm.external.session.web;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
