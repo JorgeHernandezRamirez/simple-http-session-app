@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd"
+    version="6">
+    <display-name>sample-ear</display-name>
+    <!--<module>
+        <ejb>sample-ejbs-0.0.1-SNAPSHOT.jar</ejb>
+    </module>
+    <module>
+        <ejb>acme-ejbs-0.0.1-SNAPSHOT.jar</ejb>
+    </module>-->
+    <module>
+        <web>
+            <web-uri>war-1.0.war</web-uri>
+            <context-root>/</context-root>
+        </web>
+    </module>
+    <library-directory>lib</library-directory>
+    
+    <!-- use either AcmeBarBean or BarBean in the 2nd level FooBean Dependency -->
+    <!--<ejb-local-ref>
+        <ejb-ref-name>org.sample.FooBean/bar</ejb-ref-name>
+        <ejb-link>AcmeBarBean</ejb-link>
+    </ejb-local-ref>-->
+    
+    <!-- use either AcmeFooBean (extends FooBean) or FooBean directly -->
+    <!--<ejb-local-ref>
+        <ejb-ref-name>some/Foo</ejb-ref-name>
+        <ejb-link>AcmeFooBean</ejb-link>
+    </ejb-local-ref>-->
+    
+    <!-- overriding is not possible :-( -->
+    <!--
+    <ejb-local-ref>
+        <ejb-ref-name>org.sample.HelloServlet/foo</ejb-ref-name>
+        <ejb-link>FooBean</ejb-link>
+    </ejb-local-ref>
+     -->
+     
+</application>

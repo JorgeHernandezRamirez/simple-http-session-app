@@ -20,4 +20,5 @@ USER 1001
 #RUN configure.sh
 
 # BINARIES: Add in all necessary application binaries
-ADD target/ss-web.war /opt/ol/wlp/usr/servers/defaultServer/apps
+#ADD target/ss-web.war /opt/ol/wlp/usr/servers/defaultServer/apps
+ADD ss-ear/target/ear-1.0.ear /opt/ol/wlp/usr/servers/defaultServer/apps

@@ -3,15 +3,15 @@
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ibm.demo.ss</groupId>
+	<artifactId>parent</artifactId>
 	<version>1.0</version>
-	<artifactId>simple-session</artifactId>
 	<packaging>pom</packaging>
 
 	<name>Simple HTTPSession sample</name>
 
 	<modules>
 		<module>ss-web</module>
-		<!--<module>ss-ear</module>-->
+		<module>ss-ear</module>
 	</modules>
 
 	<build>
@@ -31,7 +31,6 @@
 	</build>
 	<profiles>
 		<profile>
-			<!-- When built in OpenShift the 'openshift' profile will be used when invoking mvn -->
 			<id>openshift</id>
 		</profile>
 	</profiles>
