@@ -28,6 +28,22 @@ docker run --name session$RANDOM -p 9080:9080 \
 -e INFINISPAN_PASSWORD=$PASSWORD \
 session:1.0
 ```
+Run redis
+```bash
+docker run -d \
+  -h redis \
+  -e REDIS_PASSWORD=redis \
+  -p 6379:6379 \
+  --name redis$RANDOM \
+  redis:latest /bin/sh -c 'redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}'
+```
+To get info from redis use ```redis-cli```
+```bash
+redis-cli -h localhost -p 6379 -a redis
+ > KEYS *
+ > SET KEY1 VALUE
+ > GET KEY1
+```
 
 # IBM Client Developer Advocacy App Modernization Series
 
