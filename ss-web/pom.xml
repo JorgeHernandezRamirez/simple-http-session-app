@@ -2,6 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<parent>
+		<groupId>com.ibm.demo.ss</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0</version>
+	</parent>
+
 	<groupId>com.ibm.demo.ss</groupId>
 	<artifactId>web</artifactId>
 	<version>1.0</version>
@@ -9,23 +15,16 @@
 
 	<name>Simple HttpSession war file assembly</name>
 
-	<parent>
-		<groupId>com.ibm.demo.ss</groupId>
-		<artifactId>parent</artifactId>
-		<version>1.0</version>
-	</parent>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>
 		<dependency>
-				<groupId>net.wasdev.maven.tools.targets</groupId>
-				<artifactId>java-specs</artifactId>
-				<version>1.0</version>
-				<type>pom</type>
-				<scope>provided</scope>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>ejb</artifactId>
+			<version>${project.version}</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
@@ -40,18 +39,6 @@
 				 <target>1.8</target>
 			 </configuration>
 		 </plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>2.1</version>
-				<configuration>
-					<packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
-					<warName>ss-web</warName>
-					<outputDirectory>${project.parent.build.directory}</outputDirectory>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
-
 </project>

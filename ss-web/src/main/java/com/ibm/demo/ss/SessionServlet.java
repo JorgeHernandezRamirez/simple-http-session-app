@@ -1,4 +1,11 @@
+package com.ibm.demo.ss;
+
+
+import com.ibm.sample.ss.ejb.SessionEJB;
+
 import java.io.IOException;
+import javax.ejb.EJB;
+import javax.enterprise.context.SessionScoped;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,14 +20,15 @@ import java.net.UnknownHostException;
 @WebServlet("/session")
 public class SessionServlet extends HttpServlet {
 
-
+  @EJB
+  SessionEJB sessionEJB;
 
   public void doGet(HttpServletRequest request, HttpServletResponse response)
-      throws ServletException, IOException {
-    HttpSession session = request.getSession(true);
+      throws IOException {
+    final HttpSession session = request.getSession(true);
     response.setContentType("text/html");
-    PrintWriter out = response.getWriter();
-    String title = "Simple HttpSession Demo";
+    final PrintWriter out = response.getWriter();
+    final String title = "Simple HttpSession Demo";
     String heading;
     String serverIPAddress = "Unknown";
     String serverHost = "Unknown";
@@ -86,6 +94,7 @@ public class SessionServlet extends HttpServlet {
                 "</TR>\n" +
                 "</TABLE>\n" +
                 "</BODY></HTML>");
+      out.println("Value from EJB " + sessionEJB.count());
 
   }
 

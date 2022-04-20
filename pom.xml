@@ -10,12 +10,13 @@
 	<name>Simple HTTPSession sample</name>
 
 	<modules>
+		<module>ss-ejb</module>
 		<module>ss-web</module>
 		<module>ss-ear</module>
 	</modules>
 
 	<build>
-		<plugins>
+		<!--<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -27,7 +28,7 @@
 					</compilerArguments>
 				</configuration>
 			</plugin>
-		</plugins>
+		</plugins>-->
 	</build>
 	<profiles>
 		<profile>
