@@ -14,10 +14,4 @@
 		<module>external-session-web</module>
 		<module>external-session-ear</module>
 	</modules>
-
-	<profiles>
-		<profile>
-			<id>openshift</id>
-		</profile>
-	</profiles>
 </project>
