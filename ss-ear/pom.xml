@@ -30,7 +30,7 @@
                         </ejbModule>-->
                         <webModule>
                             <groupId>${project.groupId}</groupId>
-                            <artifactId>war</artifactId>
+                            <artifactId>web</artifactId>
                             <contextRoot>/</contextRoot>
                         </webModule>
                     </modules>
@@ -42,7 +42,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>war</artifactId>
+            <artifactId>web</artifactId>
             <version>${project.version}</version>
             <type>war</type>
         </dependency>

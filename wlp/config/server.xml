@@ -28,5 +28,5 @@
       <fileset dir="${shared.resource.dir}/infinispan" includes="*.jar"/>
   </library>
     
-  <webApplication contextRoot="/" location="web.war" />
+  <!--<webApplication contextRoot="/" location="web.war" />-->
 </server>

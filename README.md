@@ -1,3 +1,33 @@
+# Run in local
+Build with mvn
+```bash
+docker build -t session:1.0 .
+```
+Export credentials
+```bash
+export USERNAME=user
+export PASSWORD=pass
+```
+Run infinity span
+```bash
+docker run --name infinispan$RANDOM -p 7800:7800 \
+-p 11221:11221 \
+-p 11222:11222 \
+-p 45700:45700 \
+-p 57600:57600 \
+-e USER=$USERNAME \
+-e PASS=$PASSWORD \
+infinispan/server:latest
+```
+Run ear
+```bash
+docker run --name session$RANDOM -p 9080:9080 \
+-e INFINISPAN_HOST=$(ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}')  \
+-e INFINISPAN_USER=$USERNAME \
+-e INFINISPAN_PASSWORD=$PASSWORD \
+session:latest
+```
+
 # IBM Client Developer Advocacy App Modernization Series
 
 ## Simple app to demo HTTPSession replication in WebSphere Liberty on OpenShift
