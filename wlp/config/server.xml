@@ -14,7 +14,9 @@
                   httpsPort="9443"/>
 
     <!-- CONFIGURATION HAZELCAST -->
-    <httpSessionCache libraryRef="HazelcastLib" uri="file:${shared.resource.dir}/hazelcast/hazelcast.xml" />
+    <httpSessionCache libraryRef="HazelcastLib" uri="file:${shared.resource.dir}/hazelcast/hazelcast.xml">
+        <properties hazelcast.config.location="file:${shared.resource.dir}/hazelcast/hazelcast.xml"/>
+    </httpSessionCache>
 
     <library id="HazelcastLib">
         <fileset dir="${shared.resource.dir}/hazelcast" includes="*.jar"/>
