@@ -8,6 +8,7 @@
 .project
 **/*.tgz
 .idea/
+**.iml
 
 # Allow
 !**/target/*.war

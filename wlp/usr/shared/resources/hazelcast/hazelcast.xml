@@ -5,4 +5,9 @@
     <group>
         <name>MyCluster</name>
     </group>
+    <network>
+        <join>
+            <kubernetes enabled="true"/>
+        </join>
+    </network>
 </hazelcast>
