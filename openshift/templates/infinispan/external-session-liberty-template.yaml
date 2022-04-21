@@ -3,12 +3,9 @@ kind: Template
 metadata:
   name: external-session
   annotations:
-    openshift.io/display-name: Simple HttpSession sample on Liberty
-    description: Simple HttpSession sample on Liberty
+    openshift.io/display-name: External session on Liberty
+    description: External session on Liberty
     tags: liberty,websphere
-    openshift.io/provider-display-name: IBM Client Dev Advocacy.
-    openshift.io/documentation-url: https://github.com/ibmappmodernization/app-modernization-plants-by-websphere-jee6.git
-    openshift.io/support-url: https://access.redhat.com
 labels:
   app: external-session
 parameters:
@@ -50,7 +47,7 @@ parameters:
 - name: GIT_BRANCH
   description: Git source branch for application
   displayName: Git source branch for application
-  value: 'master'
+  value: 'redis'
   required: true
 - name: DOCKERFILE
   description: Dockerfile to use for BuildConfig

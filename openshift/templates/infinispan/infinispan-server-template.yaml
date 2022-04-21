@@ -37,11 +37,6 @@ parameters:
   description: Generic build trigger secret
   from: "[a-zA-Z0-9]{8}"
   generate: expression
-- name: IMAGE
-  displayName: Image
-  description: Docker image
-  value: infinispan/server:latest
-  required: true
 objects:
 - apiVersion: v1
   kind: DeploymentConfig
@@ -75,7 +70,7 @@ objects:
       spec:
         containers:
         - name: "${APPLICATION_NAME}"
-          image: "${IMAGE}"
+          image: "${APPLICATION_NAME}"
           ports:
           - containerPort: 7800
             protocol: TCP
