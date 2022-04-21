@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server>
+    <featureManager>
+        <feature>servlet-4.0</feature>
+        <feature>sessionCache-1.0</feature>
+        <feature>ejb-3.2</feature>
+    </featureManager>
+
+    <logging consoleLogLevel="INFO"></logging>
+
+    <httpEndpoint host="*"
+                  id="defaultHttpEndpoint"
+                  httpPort="9080"
+                  httpsPort="9443"/>
+
+    <!-- CONFIGURATION REDIS -->
+    <library id="jCacheVendorLib">
+        <fileset dir="${shared.resource.dir}/redisson" includes="*.jar"/>
+    </library>
+
+    <httpSessionCache libraryRef="jCacheVendorLib" uri="file:${shared.resource.dir}/redisson/redisson-jcache.yaml"/>
+</server>
