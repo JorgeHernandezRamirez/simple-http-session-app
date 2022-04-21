@@ -32,8 +32,7 @@ This repo shows how to externalizate session from enterprise java applications t
 
 # Run in local
 
-### With infinispan
-
+### With infinispan
 Set correct server.xml 
 ```bash
 cp wlp/config/server-infinispan.xml wlp/config/server.xml
@@ -68,7 +67,7 @@ docker run --name session$RANDOM -p 9080:9080 \
 session:1.0
 ```
 
-### With redis
+### With redis
 Set correct server.xml 
 ```bash
 cp wlp/config/server-redis.xml wlp/config/server.xml
