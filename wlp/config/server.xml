@@ -14,14 +14,14 @@
                   httpsPort="9443"/>
 
     <!-- CONFIGURATION REDIS -->
-    <library id="jCacheVendorLib">
+    <!--<library id="jCacheVendorLib">
         <fileset dir="${shared.resource.dir}/redisson" includes="*.jar"/>
     </library>
 
-    <httpSessionCache libraryRef="jCacheVendorLib" uri="file:${shared.resource.dir}/redisson/redisson-jcache.yaml"/>
+    <httpSessionCache libraryRef="jCacheVendorLib" uri="file:${shared.resource.dir}/redisson/redisson-jcache.yaml"/>-->
 
     <!-- CONFIGURATION INFINISPAN -->
-    <!--<httpSessionCache libraryRef="InfinispanLib">
+    <httpSessionCache libraryRef="InfinispanLib">
         <properties infinispan.client.hotrod.client_intelligence="BASIC"/>
         <properties infinispan.client.hotrod.server_list="${env.INFINISPAN_HOST}:11222"/>
         <properties infinispan.client.hotrod.auth_username="${env.INFINISPAN_USER}"/>
@@ -34,5 +34,5 @@
 
     <library id="InfinispanLib">
         <fileset dir="${shared.resource.dir}/infinispan" includes="*.jar"/>
-    </library>-->
+    </library>
 </server>
