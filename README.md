@@ -45,6 +45,10 @@ redis-cli -h localhost -p 6379 -a redis
  > GET KEY1
 ```
 
+# References
+* https://github.ibm.com/Experiential-Lab/http-session-externalization
+* https://github.com/IBMAppModernization/simple-http-session-app
+
 # IBM Client Developer Advocacy App Modernization Series
 
 ## Simple app to demo HTTPSession replication in WebSphere Liberty on OpenShift

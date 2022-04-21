@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Template
 metadata:
-  name: simple-session
+  name: external-session
   annotations:
     openshift.io/display-name: Simple HttpSession sample on Liberty
     description: Simple HttpSession sample on Liberty
@@ -10,12 +10,12 @@ metadata:
     openshift.io/documentation-url: https://github.com/ibmappmodernization/app-modernization-plants-by-websphere-jee6.git
     openshift.io/support-url: https://access.redhat.com
 labels:
-  app: simple-session
+  app: external-session
 parameters:
 - name: APPLICATION_NAME
   displayName: Application name
   description: The name for the application.
-  value: simple-session
+  value: external-session
   required: true
 - name: APPLICATION_HOSTNAME
   displayName: Application hostname
