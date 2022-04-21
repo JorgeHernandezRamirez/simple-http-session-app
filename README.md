@@ -104,6 +104,11 @@ Create templates
 ```bash
 oc create -f openshift/templates/infinispan
 ```
+Create tags
+```bash
+oc tag docker.io/open-liberty:latest open-liberty:latest
+oc tag docker.io/infinispan/server:latest infinispan-server:latest
+```
 Create infinitispan-server
 ```bash
 oc new-app --template infinispan-server
@@ -117,3 +122,5 @@ Call to app through endpoint in route
 # References
 * https://github.ibm.com/Experiential-Lab/http-session-externalization
 * https://github.com/IBMAppModernization/simple-http-session-app
+* https://www.ibm.com/docs/en/was-liberty/base?topic=manually-configuring-liberty-session-persistence-jcache
+* https://openliberty.io/guides/sessions.html

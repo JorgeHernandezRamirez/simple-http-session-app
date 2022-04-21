@@ -47,7 +47,7 @@ parameters:
 - name: GIT_BRANCH
   description: Git source branch for application
   displayName: Git source branch for application
-  value: 'redis'
+  value: 'master'
   required: true
 - name: DOCKERFILE
   description: Dockerfile to use for BuildConfig

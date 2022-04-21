@@ -8,6 +8,7 @@ COPY wlp/config/jvm.options /opt/ol/wlp/usr/servers/defaultServer/jvm.options
 RUN mkdir -p /opt/ol/wlp/usr/shared/resources/infinispan
 COPY wlp/usr/shared/resources/infinispan/*.jar /opt/ol/wlp/usr/shared/resources/infinispan/
 COPY wlp/usr/shared/resources/redisson/* /opt/ol/wlp/usr/shared/resources/redisson/
+COPY wlp/usr/shared/resources/hazelcast/* /opt/ol/wlp/usr/shared/resources/hazelcast/
 USER root
 RUN chown 1001:0 /opt/ol/wlp/usr/shared/resources/infinispan/*.jar
 USER 1001
