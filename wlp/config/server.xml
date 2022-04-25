@@ -13,12 +13,19 @@
                   httpPort="9080"
                   httpsPort="9443"/>
 
-    <!-- CONFIGURATION HAZELCAST -->
-    <httpSessionCache libraryRef="HazelcastLib" uri="file:${shared.resource.dir}/hazelcast/hazelcast.xml">
-        <properties hazelcast.config.location="file:${shared.resource.dir}/hazelcast/hazelcast.xml"/>
+    <!-- CONFIGURATION INFINISPAN -->
+    <httpSessionCache libraryRef="InfinispanLib">
+        <properties infinispan.client.hotrod.client_intelligence="BASIC"/>
+        <properties infinispan.client.hotrod.server_list="${env.INFINISPAN_HOST}:11222"/>
+        <properties infinispan.client.hotrod.auth_username="${env.INFINISPAN_USER}"/>
+        <properties infinispan.client.hotrod.auth_password="${env.INFINISPAN_PASSWORD}"/>
+        <properties infinispan.client.hotrod.sasl_mechanism="DIGEST-MD5"/>
+        <properties infinispan.client.hotrod.auth_realm="default"/>
+        <properties infinispan.client.hotrod.java_serial_whitelist=".*"/>
+        <properties infinispan.client.hotrod.marshaller="org.infinispan.commons.marshall.JavaSerializationMarshaller"/>
     </httpSessionCache>
 
-    <library id="HazelcastLib">
-        <fileset dir="${shared.resource.dir}/hazelcast" includes="*.jar"/>
+    <library id="InfinispanLib">
+        <fileset dir="${shared.resource.dir}/infinispan" includes="*.jar"/>
     </library>
 </server>
